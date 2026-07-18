@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 🛡️ ScamShield-PK
 
 A Hybrid Machine Learning + Rule-Based Job & Internship Scam Detection System.
