@@ -1,52 +1,82 @@
-# ScamShield-PK
+# 🛡️ ScamShield-PK
 
-A hybrid SMS and job scam detection system built with Machine Learning and rule-based risk analysis.
+A Hybrid Machine Learning + Rule-Based Job & Internship Scam Detection System.
 
-## Features
+## 🌐 Live Demo
 
-- Detects scam, suspicious, and legitimate SMS/job messages
-- Uses a TF-IDF + Logistic Regression machine learning model
-- Adds rule-based evidence detection for high-risk signals
-- Detects CNIC requests, OTP requests, verification fees, urgency, WhatsApp-only contact, and unrealistic salary claims
-- Provides a risk score, risk level, detected evidence, and safety recommendation
-- Includes a Streamlit web application interface
+**Try the application here:**
 
-## Dataset
+https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/
 
-The ML model was trained using the SMS Spam Collection dataset from Kaggle.
+---
 
-- Total messages: 5,572
-- Legitimate messages: 4,825
-- Scam/spam messages: 747
-- Train-test split: 80% training and 20% testing
-- Model test accuracy: approximately 98%
+## 📌 Project Overview
 
-Dataset source: https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
+ScamShield-PK detects fraudulent job, internship, WhatsApp, SMS, and email messages using a hybrid approach that combines Machine Learning with rule-based detection.
 
-## Technologies Used
+It identifies common scam indicators including:
+
+- CNIC requests
+- OTP requests
+- Verification fee requests
+- Fake selection claims
+- Unrealistic salary offers
+- No interview claims
+- Urgency indicators
+
+---
+
+## ✨ Features
+
+- Hybrid ML + Rule-Based Detection
+- Real-time Scam Analysis
+- Risk Score Calculation
+- Scam Probability Prediction
+- Evidence Detection
+- Security Recommendations
+- Streamlit Web Application
+
+---
+
+## 🛠 Technologies
 
 - Python
-- Pandas
-- Scikit-learn
-- TF-IDF Vectorizer
-- Logistic Regression
 - Streamlit
+- Scikit-learn
 - Joblib
+- Machine Learning
+- Regular Expressions (Regex)
 
-## How It Works
+---
 
-1. The user enters an SMS or job-related message.
-2. The ML model calculates scam probability.
-3. The rule-based engine checks for risky indicators.
-4. Both results are combined into a final prediction:
-   - Legitimate
-   - Suspicious
-   - Scam
-5. The system shows a risk score and a recommended safety action.
-
-## Run Locally
-
-Install required packages:
+## 🚀 Run Locally
 
 ```bash
-pip install streamlit pandas scikit-learn joblib
+git clone https://github.com/aynnaqurat-art/ScamShield-PK.git
+
+cd ScamShield-PK
+
+pip install -r requirements.txt
+
+streamlit run app.py
+```
+
+---
+
+## 📂 Repository
+
+GitHub:
+
+https://github.com/aynnaqurat-art/ScamShield-PK
+
+---
+
+## 👩‍💻 Developer
+
+**Qurat-ul-Ain**
+
+M.Phil Information Technology  
+University of Sargodha
+
+GitHub:
+https://github.com/aynnaqurat-art
