@@ -192,7 +192,6 @@ def get_existing_url_report(
 
     return result
 
-
 def submit_url_for_scan(
     url: str,
     headers: dict
@@ -200,11 +199,27 @@ def submit_url_for_scan(
     """
     Submit a URL to VirusTotal and return its analysis ID.
     """
+
+    cleaned_url = url.strip()
+
+    if not cleaned_url.startswith(
+        ("http://", "https://")
+    ):
+        cleaned_url = "https://" + cleaned_url
+
     try:
         response = requests.post(
             VT_URL_ENDPOINT,
-            headers=headers,
-            data={"url": url},
+            headers={
+                "x-apikey": headers["x-apikey"],
+                "accept": "application/json"
+            },
+            files={
+                "url": (
+                    None,
+                    cleaned_url
+                )
+            },
             timeout=20
         )
 
@@ -216,11 +231,12 @@ def submit_url_for_scan(
             )
         }
 
-    except requests.RequestException:
+    except requests.RequestException as error:
         return {
             "status": "error",
             "message": (
-                "Could not submit the URL to VirusTotal."
+                f"Could not submit the URL to VirusTotal: "
+                f"{error}"
             )
         }
 
@@ -230,16 +246,31 @@ def submit_url_for_scan(
         return common_error
 
     if response.status_code not in {200, 201}:
+
+        try:
+            error_data = response.json()
+
+            error_message = (
+                error_data
+                .get("error", {})
+                .get("message", "")
+            )
+
+        except ValueError:
+            error_message = response.text[:200]
+
         return {
             "status": "error",
             "message": (
                 "VirusTotal could not accept the URL. "
-                f"Error code: {response.status_code}."
+                f"Error code: {response.status_code}. "
+                f"{error_message}"
             )
         }
 
     try:
         data = response.json()
+
     except ValueError:
         return {
             "status": "error",
