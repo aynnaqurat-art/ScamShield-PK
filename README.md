@@ -71,5 +71,34 @@ ScamShield-PK was developed with the following objectives:
 - Demonstrate the practical application of Artificial Intelligence and Cybersecurity concepts through an interactive web application.
 
 ---
+# ✨ Key Features
+
+ScamShield-PK provides a comprehensive set of security-focused features designed to help users identify potential online scams through an intuitive web interface.
+
+### 🤖 AI-Powered Message Analysis
+Analyzes suspicious text messages and predicts whether they are legitimate or potentially fraudulent using a machine learning model.
+
+### 🛡️ Hybrid Detection Approach
+Combines machine learning predictions with rule-based security checks to improve detection reliability and provide more informative results.
+
+### 🔗 Phishing URL Inspection
+Examines URLs for common phishing indicators, including insecure protocols, suspicious domains, URL shorteners, excessive subdomains, and other structural characteristics.
+
+### 🌐 Social Media Link Verification
+Identifies trusted social media platforms and helps detect lookalike or impersonated domains that may be used in phishing attacks.
+
+### 🛡️ VirusTotal Reputation Check
+Retrieves reputation data from the VirusTotal API, allowing users to view security vendor detections and additional threat intelligence for submitted URLs.
+
+### 📊 Explainable Risk Assessment
+Generates an overall risk level together with supporting evidence, enabling users to understand why a message or URL has been classified as suspicious.
+
+### 💡 Security Recommendations
+Provides practical recommendations that help users make safer decisions before clicking links, sharing personal information, or responding to suspicious messages.
+
+### ☁️ Interactive Web Application
+Offers a responsive and user-friendly interface built with Streamlit, making the system accessible directly through a web browser without requiring installation.
+
+---
 
 ---
