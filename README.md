@@ -100,5 +100,557 @@ Provides practical recommendations that help users make safer decisions before c
 Offers a responsive and user-friendly interface built with Streamlit, making the system accessible directly through a web browser without requiring installation.
 
 ---
+# 🏗️ System Architecture
+
+ScamShield-PK follows a modular architecture that processes user inputs through dedicated analysis pipelines before generating a comprehensive security assessment. Each component is designed to perform a specific task, making the application easier to maintain, extend, and improve.
+
+```text
+                           ┌────────────────────┐
+                           │      User Input     │
+                           └─────────┬──────────┘
+                                     │
+                    ┌────────────────┴────────────────┐
+                    │                                 │
+            Scam Message                       URL Input
+                    │                                 │
+                    ▼                                 ▼
+        Machine Learning Model              URL Structure Analysis
+                    │                                 │
+                    ▼                                 ▼
+        Rule-Based Security Checks      Social Media Domain Verification
+                    │                                 │
+                    └───────────────┬─────────────────┘
+                                    │
+                                    ▼
+                         VirusTotal Reputation Check
+                                    │
+                                    ▼
+                         Risk Assessment Engine
+                                    │
+                                    ▼
+                    Security Report & Recommendations
+```
+
+---
+
+# 🔄 Application Workflow
+
+The overall workflow of ScamShield-PK consists of the following stages:
+
+### Step 1 — User Input
+The user submits either a suspicious message or a URL through the web application.
+
+### Step 2 — Content Analysis
+The application routes the input to the appropriate analysis module, where relevant security checks are performed.
+
+### Step 3 — Threat Evaluation
+Results from different detection components are combined to evaluate the potential security risk.
+
+### Step 4 — Risk Assessment
+The application calculates an overall risk level based on the collected evidence and analysis results.
+
+### Step 5 — Security Report
+A final report is presented to the user, including the detected risk level, supporting evidence, and practical security recommendations.
+
+---
+# 🛠️ Technology Stack
+
+ScamShield-PK was developed using modern technologies for machine learning, cybersecurity analysis, web application development, and cloud deployment. Each technology was selected to provide reliability, scalability, and ease of maintenance.
+
+| Category | Technology | Purpose |
+|----------|------------|---------|
+| Programming Language | Python 3.11 | Core programming language used to develop the application and implement all detection modules. |
+| Web Framework | Streamlit | Provides an interactive web interface for analyzing messages and URLs in real time. |
+| Machine Learning | Scikit-learn | Used to build and execute the machine learning model for scam message classification. |
+| Natural Language Processing | TF-IDF Vectorizer | Converts textual content into numerical feature vectors suitable for machine learning. |
+| Classification Model | Logistic Regression | Predicts whether a message is legitimate or potentially fraudulent. |
+| Data Processing | Pandas | Handles and processes structured data during model development and testing. |
+| Numerical Computing | NumPy | Supports efficient numerical operations required by the machine learning pipeline. |
+| Threat Intelligence | VirusTotal API v3 | Retrieves security reputation information for submitted URLs from multiple security vendors. |
+| Version Control | Git & GitHub | Manages source code, version history, and collaborative development. |
+| Cloud Deployment | Streamlit Community Cloud | Hosts the application online for public access without requiring local installation. |
+| Development Environment | Visual Studio Code | Primary IDE used for application development and debugging. |
+
+---
+
+## 📦 Project Dependencies
+
+The project relies on the following Python libraries:
+
+- streamlit
+- scikit-learn
+- pandas
+- numpy
+- requests
+- joblib
+
+All required dependencies are listed in the `requirements.txt` file and can be installed using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+# 📂 Project Structure
+
+The project is organized into modular components, making the codebase easier to understand, maintain, and extend. Each file is responsible for a specific functionality within the application.
+
+```text
+ScamShield-PK/
+│
+├── app.py
+├── url_detector.py
+├── virustotal_checker.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+├── scamshield_pk_ml_model.pkl
+├── notebooks/
+│
+└── screenshots/
+```
+
+---
+
+## 📁 Directory Description
+
+| File / Folder | Description |
+|---------------|-------------|
+| `app.py` | Main Streamlit application that manages the user interface, handles user input, and coordinates the complete detection workflow. |
+| `url_detector.py` | Performs structural URL analysis by examining phishing indicators such as suspicious domains, insecure protocols, URL shorteners, and other security-related characteristics. |
+| `virustotal_checker.py` | Communicates with the VirusTotal API to retrieve URL reputation information and threat intelligence from multiple security vendors. |
+| `scamshield_pk_ml_model.pkl` | Serialized machine learning model used to classify suspicious messages without retraining during application runtime. |
+| `requirements.txt` | Lists all Python dependencies required to install and run the project. |
+| `README.md` | Contains the complete project documentation, setup instructions, and usage guide. |
+| `LICENSE` | Defines the licensing terms under which the project can be used and distributed. |
+| `.gitignore` | Specifies files and folders that should not be tracked by Git, such as cache files and virtual environments. |
+| `notebooks/` | Stores Jupyter notebooks used during experimentation, model training, and data analysis. |
+| `screenshots/` | Contains images used to demonstrate the application's interface and results within this documentation. |
+
+---
+
+## 📌 Project Design Principles
+
+The project follows a modular design to improve readability, maintainability, and future scalability. By separating machine learning, URL analysis, and external API integration into independent modules, each component can be updated or enhanced without affecting the overall application.
+
+---
+# 🚀 Installation & Setup
+
+Follow the steps below to set up and run ScamShield-PK on your local machine.
+
+## 📋 Prerequisites
+
+Before installing the project, ensure that the following software is available on your system:
+
+- Python 3.11 or later
+- Git
+- A code editor (Visual Studio Code is recommended)
+- A VirusTotal API key (optional, required only for URL reputation analysis)
+
+---
+
+## 📥 Clone the Repository
+
+Clone the project from GitHub using the following command:
+
+```bash
+git clone https://github.com/aynnaqurat-art/ScamShield-PK.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd ScamShield-PK
+```
+
+---
+
+## 🐍 Create a Virtual Environment (Recommended)
+
+Creating a virtual environment helps isolate project dependencies from other Python projects.
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### macOS / Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 📦 Install Required Dependencies
+
+Install all required Python packages using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 Configure the VirusTotal API (Optional)
+
+To enable URL reputation analysis, create a `.streamlit/secrets.toml` file and add your VirusTotal API key:
+
+```toml
+VIRUSTOTAL_API_KEY = "YOUR_API_KEY"
+```
+
+> **Note:** Keep your API key private and never commit it to a public GitHub repository.
+
+---
+
+## ▶️ Run the Application
+
+Start the Streamlit application by executing:
+
+```bash
+streamlit run app.py
+```
+
+Once the application starts, open the local URL displayed in your terminal (typically `http://localhost:8501`) using your web browser.
+
+---
+
+## ✅ Verify the Installation
+
+If the setup is successful, the application should display:
+
+- Message Analyzer
+- URL Analyzer
+- Risk Assessment Results
+- Security Recommendations
+
+The project is now ready to analyze suspicious messages and URLs.
+
+---
+# 📖 Usage Guide
+
+After launching the application, users can analyze suspicious messages and URLs through an intuitive web interface. Follow the instructions below to use each module.
+
+---
+
+## 💬 Message Analyzer
+
+The **Message Analyzer** helps evaluate suspicious text messages using a hybrid detection approach.
+
+### Steps
+
+1. Open the **Message Analyzer** section.
+2. Copy and paste the suspicious message into the input box.
+3. Click the **Analyze Message** button.
+4. Wait for the analysis to complete.
+5. Review the generated security report.
+
+The report includes:
+
+- Classification result
+- Confidence level
+- Risk score
+- Supporting evidence
+- Security recommendation
+
+---
+
+## 🔗 URL Analyzer
+
+The **URL Analyzer** evaluates URLs for potential phishing indicators and domain-related security risks.
+
+### Steps
+
+1. Open the **URL Analyzer** section.
+2. Enter the complete URL, including `https://` when available.
+3. Click the **Analyze URL** button.
+4. Review the generated analysis report.
+
+The report may include:
+
+- URL risk level
+- Detected security indicators
+- Domain verification status
+- Structural analysis findings
+
+---
+
+## 🛡️ VirusTotal Reputation Check
+
+If a VirusTotal API key has been configured, the application can retrieve additional threat intelligence for submitted URLs.
+
+### Steps
+
+1. Analyze a URL using the URL Analyzer.
+2. Allow the application to request reputation data.
+3. Wait for the analysis to complete.
+4. Review the reputation summary.
+
+The report displays:
+
+- Malicious detections
+- Suspicious detections
+- Harmless detections
+- Undetected security engines
+- Overall reputation assessment
+
+---
+
+## 📊 Understanding the Results
+
+Each analysis produces an easy-to-understand security report.
+
+| Result | Meaning |
+|---------|---------|
+| **Low Risk** | No significant security indicators were detected. |
+| **Medium Risk** | Some suspicious characteristics were identified and should be reviewed carefully. |
+| **High Risk** | Multiple indicators suggest that the message or URL may be malicious. Immediate caution is recommended. |
+
+---
+
+## ⚠️ Best Practices
+
+To improve online safety, always follow these recommendations:
+
+- Verify unknown senders before responding.
+- Avoid clicking suspicious or shortened links.
+- Never share sensitive information without verification.
+- Confirm job offers through official company websites.
+- Treat urgent requests for money or personal data with caution.
+- Use multiple sources to verify suspicious content whenever possible.
+
+---
+# 🧠 Machine Learning Pipeline
+
+ScamShield-PK uses a supervised machine learning pipeline to classify suspicious job-related messages. The pipeline transforms raw textual input into numerical representations, enabling the classification model to distinguish between legitimate and potentially fraudulent content.
+
+The workflow consists of multiple stages, each contributing to the final prediction.
+
+---
+
+## 📥 Data Collection
+
+The machine learning model was developed using a labeled dataset containing both legitimate and scam-related messages. The dataset includes examples of common social engineering techniques such as fake job offers, requests for advance payments, credential theft attempts, and urgency-based scams.
+
+---
+
+## 🧹 Text Preprocessing
+
+Before training or prediction, each message undergoes preprocessing to improve data quality and reduce unnecessary variation.
+
+The preprocessing stage includes:
+
+- Converting text to lowercase
+- Removing punctuation and special characters
+- Eliminating extra whitespace
+- Normalizing textual content
+
+These steps produce a cleaner representation of the input while preserving meaningful information.
+
+---
+
+## 🔠 Feature Extraction
+
+After preprocessing, textual data is converted into numerical feature vectors using the **Term Frequency–Inverse Document Frequency (TF-IDF)** technique.
+
+TF-IDF measures the importance of words based on their frequency within individual messages and across the entire dataset. This representation enables the classifier to identify linguistic patterns commonly associated with fraudulent messages.
+
+---
+
+## 🤖 Message Classification
+
+The generated feature vectors are processed by a **Logistic Regression** classifier.
+
+The model estimates the probability that an input message belongs to either of the following categories:
+
+- Legitimate
+- Scam
+
+This lightweight algorithm was selected because it provides efficient inference, strong baseline performance, and good interpretability for text classification tasks.
+
+---
+
+## 🛡️ Hybrid Decision Strategy
+
+Machine learning predictions are complemented by additional rule-based security checks. These rules examine message characteristics that may indicate suspicious behavior but are not always captured by statistical learning alone.
+
+The combined evaluation improves the reliability of the final security assessment while providing more transparent results to the user.
+
+---
+
+## 📤 Prediction Output
+
+After completing the analysis, the application generates a structured security report that includes:
+
+- Predicted classification
+- Confidence level
+- Risk score
+- Supporting evidence
+- Security recommendation
+
+The final output is presented through the Streamlit interface in a format designed to be understandable for both technical and non-technical users.
+
+---
+# 🔗 URL Detection Workflow
+
+In addition to message analysis, ScamShield-PK includes a dedicated URL inspection module designed to identify suspicious or potentially malicious web links. Rather than relying solely on external threat databases, the system performs a structural analysis of each submitted URL to detect characteristics commonly associated with phishing attacks.
+
+This approach enables the application to provide an initial security assessment even when a URL has not yet been reported by public threat intelligence services.
+
+---
+
+## 🔍 URL Analysis Process
+
+Every submitted URL passes through a sequence of security validation checks before a final risk assessment is generated.
+
+```text
+User Submits URL
+        │
+        ▼
+URL Format Validation
+        │
+        ▼
+Structural Security Analysis
+        │
+        ▼
+Domain Verification
+        │
+        ▼
+Risk Score Calculation
+        │
+        ▼
+Security Report Generation
+```
+
+---
+
+## 🛡️ Security Indicators
+
+The URL analysis module evaluates multiple indicators that are frequently observed in phishing and fraudulent websites.
+
+The inspection includes checks such as:
+
+- Secure HTTPS protocol usage
+- Presence of suspicious keywords
+- URL shortening services
+- IP address–based URLs
+- Punycode or encoded domains
+- Excessive subdomains
+- Abnormally long URLs
+- Multiple hyphens within domain names
+- Suspicious special characters
+- Domain impersonation patterns
+
+Rather than depending on a single indicator, the application evaluates these characteristics collectively to estimate the overall risk associated with the submitted URL.
+
+---
+
+## 📊 Risk Assessment
+
+Each detected security indicator contributes to the overall evaluation process.
+
+Based on the combined analysis, the application classifies the URL into one of the following categories:
+
+| Risk Level | Description |
+|------------|-------------|
+| **Low Risk** | No significant phishing indicators were detected. |
+| **Medium Risk** | Several suspicious characteristics were identified and additional verification is recommended. |
+| **High Risk** | Multiple indicators strongly suggest that the URL may be malicious or deceptive. |
+
+---
+
+## 📋 Analysis Output
+
+After completing the inspection, the application generates a structured report containing:
+
+- URL validation status
+- Overall risk level
+- Detected security indicators
+- Domain verification result
+- Supporting evidence
+- Security recommendation
+
+The generated report is intended to help users understand the reasoning behind the assessment and make informed decisions before visiting potentially unsafe websites.
+
+---
+# 🛡️ VirusTotal Integration
+
+To strengthen URL security analysis, ScamShield-PK integrates with the **VirusTotal API v3**, a widely recognized threat intelligence platform that aggregates security assessments from multiple antivirus engines and cybersecurity vendors.
+
+This integration complements the application's internal analysis by providing additional reputation-based insights for submitted URLs.
+
+---
+
+## 🌍 Why VirusTotal?
+
+Structural URL analysis is effective for identifying suspicious patterns, but it cannot always determine whether a URL has already been reported as malicious.
+
+VirusTotal enhances the security assessment by providing publicly available threat intelligence collected from numerous security vendors, enabling users to make more informed decisions before visiting an unknown website.
+
+---
+
+## 🔄 Integration Workflow
+
+The VirusTotal integration follows the workflow below:
+
+```text
+User Submits URL
+        │
+        ▼
+ScamShield-PK
+        │
+        ▼
+VirusTotal API
+        │
+        ▼
+Threat Intelligence Retrieval
+        │
+        ▼
+Reputation Analysis
+        │
+        ▼
+Final Security Report
+```
+
+---
+
+## 📊 Reputation Information
+
+When a URL reputation report is available, the application presents information such as:
+
+- Malicious detections
+- Suspicious detections
+- Harmless detections
+- Undetected security engines
+- Overall reputation status
+
+These results provide additional context that complements the application's internal security assessment.
+
+---
+
+## 🔒 Privacy and Security
+
+ScamShield-PK uses the VirusTotal API solely to retrieve publicly available URL reputation information.
+
+The application does not store user-submitted URLs or maintain any history of reputation lookups. Users should avoid submitting confidential or private URLs to any external threat intelligence service.
+
+---
+
+## 📌 Integration Benefits
+
+The VirusTotal integration provides several advantages:
+
+- Improves confidence in URL reputation assessments.
+- Adds external threat intelligence to complement internal analysis.
+- Helps identify URLs previously reported by security vendors.
+- Enhances transparency by presenting vendor-based reputation results.
+- Supports more informed cybersecurity decision-making.
+
+---
 
 ---
