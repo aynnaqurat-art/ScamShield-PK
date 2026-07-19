@@ -652,5 +652,252 @@ The VirusTotal integration provides several advantages:
 - Supports more informed cybersecurity decision-making.
 
 ---
+# 🖼️ Application Preview
 
+The following screenshots demonstrate the primary functionalities of ScamShield-PK. These previews provide an overview of the user interface and illustrate how the application presents security analysis results.
+
+> **Note:** Replace the placeholder image paths below with actual screenshots stored in the `screenshots/` directory.
+
+---
+
+## 🏠 Home Interface
+
+The home page introduces the application and provides access to the available security analysis modules through a simple and user-friendly interface.
+
+```markdown
+![Home Interface](screenshots/home.png)
+```
+
+---
+
+## 💬 Message Analyzer
+
+This module allows users to submit suspicious messages for analysis. The generated report presents the predicted classification, confidence level, supporting evidence, and security recommendations.
+
+```markdown
+![Message Analyzer](screenshots/message_analyzer.png)
+```
+
+---
+
+## 🔗 URL Analyzer
+
+The URL Analyzer evaluates submitted links for phishing-related characteristics and presents a comprehensive security assessment based on structural analysis.
+
+```markdown
+![URL Analyzer](screenshots/url_analyzer.png)
+```
+
+---
+
+## 🛡️ VirusTotal Reputation Results
+
+When URL reputation analysis is available, the application displays information retrieved from VirusTotal, including vendor detections and reputation statistics.
+
+```markdown
+![VirusTotal Results](screenshots/virustotal_results.png)
+```
+
+---
+
+## 📊 Risk Assessment Report
+
+After completing the analysis, the application generates a structured report summarizing the detected risk level, supporting evidence, and recommended actions.
+
+```markdown
+![Risk Assessment](screenshots/risk_report.png)
+```
+
+---
+
+# 🚀 Future Improvements
+
+ScamShield-PK has been designed with a modular architecture that allows future enhancements without significant changes to the existing codebase. The following improvements are planned for future releases:
+
+## 📈 Enhanced Machine Learning Models
+
+Explore transformer-based language models, such as BERT or DistilBERT, to improve classification accuracy and better understand complex linguistic patterns in scam messages.
+
+---
+
+## 🌍 Multilingual Scam Detection
+
+Extend support for additional languages, including Urdu, Roman Urdu, and other regional languages, to improve accessibility for a wider audience.
+
+---
+
+## 📷 Image-Based Scam Detection
+
+Introduce Optical Character Recognition (OCR) to analyze screenshots containing suspicious messages, emails, or advertisements.
+
+---
+
+## 📱 Mobile Application
+
+Develop a cross-platform mobile application that enables users to analyze suspicious content directly from their smartphones.
+
+---
+
+## 🌐 Browser Extension
+
+Create a browser extension capable of evaluating URLs in real time and warning users before they visit potentially unsafe websites.
+
+---
+
+## 🔍 Domain Intelligence Expansion
+
+Enhance URL analysis by incorporating additional domain intelligence sources, including WHOIS information, domain age, SSL certificate validation, and DNS-based security checks.
+
+---
+
+## 📊 Analytics Dashboard
+
+Develop an administrative dashboard that provides insights into detected scam patterns, threat trends, and application usage statistics.
+
+---
+
+## 🔄 Continuous Model Improvement
+
+Regularly update the training dataset with newly identified scam patterns to improve the model's ability to detect emerging threats.
+
+---
+
+## ☁️ Cloud-Based Threat Intelligence
+
+Integrate additional public threat intelligence services to complement existing reputation analysis and improve overall detection coverage.
+
+---
+
+## 🎯 Long-Term Vision
+
+The long-term objective of ScamShield-PK is to evolve into a comprehensive cybersecurity awareness platform that assists users in identifying online scams through intelligent analysis, transparent risk assessment, and continuously updated threat intelligence.
+
+---# ⚠️ Project Limitations
+
+While ScamShield-PK provides an effective approach for identifying suspicious messages and URLs, it is important to recognize the current scope and limitations of the project.
+
+---
+
+## Limited Detection Scope
+
+The current machine learning model is primarily trained to identify **job-related scam messages**. Although it may recognize other suspicious content, its performance has not been specifically optimized for every category of online scams.
+
+---
+
+## Dependency on Training Data
+
+Like all supervised machine learning systems, the quality of predictions depends on the diversity and quality of the training dataset. Newly emerging scam techniques may require additional training data to maintain detection performance.
+
+---
+
+## Structural URL Analysis
+
+The URL analysis module evaluates structural characteristics commonly associated with phishing attacks. However, a structurally valid URL should not automatically be considered trustworthy.
+
+---
+
+## External Threat Intelligence Availability
+
+VirusTotal reputation results depend on publicly available threat intelligence. Newly created or previously unseen URLs may have limited or no reputation information available.
+
+---
+
+## Internet Connectivity
+
+The VirusTotal reputation service requires an active internet connection. If the external service is unavailable, the application continues to perform its internal analysis but cannot retrieve external reputation data.
+
+---
+
+## Educational and Research Purpose
+
+ScamShield-PK was developed as an academic and portfolio project to demonstrate the practical application of Artificial Intelligence and Cybersecurity techniques. It is not intended to replace commercial security products or enterprise-grade threat detection platforms.
+
+---
+
+## Continuous Improvement
+
+Cybersecurity threats evolve continuously. Maintaining effective detection requires periodic dataset updates, model refinement, and the integration of new threat intelligence sources.
+# 🤝 Contributing
+
+Contributions are welcome and appreciated. Whether you would like to report a bug, suggest an enhancement, improve the documentation, or contribute new features, your support is valuable.
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new feature or bug-fix branch.
+3. Implement and test your changes.
+4. Commit your modifications with clear commit messages.
+5. Submit a Pull Request describing your proposed changes.
+
+Before submitting a contribution, please ensure that:
+
+- The code follows the existing project structure and coding style.
+- New functionality is tested before submission.
+- Documentation is updated whenever necessary.
+- Existing functionality remains unaffected.
+
+Constructive feedback, suggestions, and feature requests are always welcome through GitHub Issues.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+The MIT License permits anyone to use, modify, distribute, and adapt the software for both academic and commercial purposes, provided that the original copyright notice and license are retained.
+
+For complete licensing terms, please refer to the **LICENSE** file included in this repository.
+
+---
+# 👩‍💻 Author
+
+**Bella**
+
+M.Phil Researcher in Information Technology  
+Department of Information Technology  
+University of Sargodha, Pakistan
+
+**GitHub Profile:**  
+https://github.com/aynnaqurat-art
+
+If you have questions, suggestions, or would like to discuss this project, feel free to connect through GitHub.
+
+---
+
+# 🙏 Acknowledgements
+
+This project was made possible with the support of the open-source community and the following technologies and platforms:
+
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas
+- NumPy
+- VirusTotal API
+- Git & GitHub
+
+Special thanks to the developers and maintainers of these technologies for providing reliable tools that support learning, research, and software development.
+
+---
+
+# ⚠️ Disclaimer
+
+ScamShield-PK is an academic and portfolio project developed to demonstrate the practical application of Artificial Intelligence and Cybersecurity concepts.
+
+The application provides AI-assisted risk assessments based on machine learning, security rules, and publicly available threat intelligence. Although reasonable efforts have been made to improve detection reliability, the results should be considered advisory rather than definitive.
+
+Users should always exercise independent judgment and verify suspicious messages or websites through official and trusted sources before sharing personal information, making financial transactions, or interacting with unknown links.
+
+The author assumes no responsibility for decisions or actions taken based on the results generated by this application.
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project useful, consider giving it a star on GitHub.
+
+**Thank you for visiting the ScamShield-PK repository.**
+
+</div>
+---
 ---
