@@ -49,5 +49,27 @@ Designed as an academic and portfolio project, ScamShield-PK demonstrates the pr
 - ☁️ Live VirusTotal reputation checking
 - 📊 Explainable risk scoring with security recommendations
 - 🚀 Publicly deployed Streamlit web application
+# 🚨 Problem Statement
+
+The rapid growth of digital communication has significantly increased the number of online scams targeting individuals through job advertisements, messaging platforms, emails, and fraudulent websites. Cybercriminals frequently exploit social engineering techniques to manipulate users into revealing sensitive information, making financial payments, or interacting with malicious links.
+
+Many users struggle to distinguish between legitimate and fraudulent content because scam messages often imitate trusted organizations and use persuasive language to create a false sense of urgency. As a result, victims may unknowingly expose personal information or suffer financial losses.
+
+These challenges highlight the need for an accessible solution that can assist users in evaluating potentially suspicious content before taking any action.
+
+---
+
+# 🎯 Project Objectives
+
+ScamShield-PK was developed with the following objectives:
+
+- Detect suspicious job-related messages before users respond to them.
+- Identify potentially malicious URLs using multiple security indicators.
+- Help users recognize fake or impersonated social media links.
+- Provide clear and understandable risk assessments supported by evidence.
+- Promote cybersecurity awareness by encouraging safer online decision-making.
+- Demonstrate the practical application of Artificial Intelligence and Cybersecurity concepts through an interactive web application.
+
+---
 
 ---
