@@ -1,87 +1,53 @@
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)
-![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=streamlit)](https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/)
 # 🛡️ ScamShield-PK
 
-A Hybrid Machine Learning + Rule-Based Job & Internship Scam Detection System.
+### AI-Powered Scam Message, Phishing URL & Social Media Link Detection System
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)
+
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?logo=scikitlearn)
+
+![VirusTotal](https://img.shields.io/badge/VirusTotal-API-green)
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</p>
+
+---
 
 ## 🌐 Live Demo
 
-**Try the application here:**
+🔗 **Web Application**
 
 https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/
 
----
-
-## 📌 Project Overview
-
-ScamShield-PK detects fraudulent job, internship, WhatsApp, SMS, and email messages using a hybrid approach that combines Machine Learning with rule-based detection.
-
-It identifies common scam indicators including:
-
-- CNIC requests
-- OTP requests
-- Verification fee requests
-- Fake selection claims
-- Unrealistic salary offers
-- No interview claims
-- Urgency indicators
-
----
-
-## ✨ Features
-
-- Hybrid ML + Rule-Based Detection
-- Real-time Scam Analysis
-- Risk Score Calculation
-- Scam Probability Prediction
-- Evidence Detection
-- Security Recommendations
-- Streamlit Web Application
-
----
-
-## 🛠 Technologies
-
-- Python
-- Streamlit
-- Scikit-learn
-- Joblib
-- Machine Learning
-- Regular Expressions (Regex)
-
----
-
-## 🚀 Run Locally
-
-```bash
-git clone https://github.com/aynnaqurat-art/ScamShield-PK.git
-
-cd ScamShield-PK
-
-pip install -r requirements.txt
-
-streamlit run app.py
-```
-
----
-
-## 📂 Repository
-
-GitHub:
+📂 **GitHub Repository**
 
 https://github.com/aynnaqurat-art/ScamShield-PK
 
 ---
 
-## 👩‍💻 Developer
+# 📌 Overview
 
-**Qurat-ul-Ain**
+ScamShield-PK is an AI-powered cybersecurity web application developed to help users identify scam job messages, phishing URLs, and fake social media links before interacting with them.
 
-M.Phil Information Technology  
-University of Sargodha
+The application combines Machine Learning, rule-based cybersecurity analysis, URL structural inspection, and external threat intelligence from the VirusTotal API to provide an explainable risk assessment. Instead of relying on a single detection method, ScamShield-PK evaluates multiple security indicators and presents users with a clear risk score, supporting evidence, and actionable recommendations.
 
-GitHub:
-https://github.com/aynnaqurat-art
+Designed as an academic and portfolio project, ScamShield-PK demonstrates the practical application of Artificial Intelligence and Cybersecurity concepts through an interactive web interface deployed on Streamlit Community Cloud.
+
+---
+
+## 🎯 Project Highlights
+
+- 🤖 AI-powered scam message detection
+- 🛡️ Hybrid Machine Learning and rule-based analysis
+- 🔗 Phishing URL structural inspection
+- 🌐 Social media lookalike domain detection
+- ☁️ Live VirusTotal reputation checking
+- 📊 Explainable risk scoring with security recommendations
+- 🚀 Publicly deployed Streamlit web application
+
+---
