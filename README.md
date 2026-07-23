@@ -1,42 +1,24 @@
 # 🛡️ ScamShield-PK
 
-### AI-Powered Scam Message, Phishing URL & Social Media Link Detection System
+## AI-Powered Scam Message, Phishing URL & Social Media Link Detection System
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" alt="Python">
-<img src="https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit" alt="Streamlit">
-<img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?logo=scikitlearn" alt="Scikit-learn">
-<img src="https://img.shields.io/badge/VirusTotal-API-green" alt="VirusTotal">
-<img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
-
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" alt="Python"/>
+  <img src="https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit" alt="Streamlit"/>
+  <img src="https://img.shields.io/badge/Scikit--learn-orange?logo=scikitlearn" alt="Scikit-learn"/>
+  <img src="https://img.shields.io/badge/VirusTotal-API-green" alt="VirusTotal"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"/>
 </p>
 
 <p align="center">
-
-<a href="https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/">
-<img src="https://img.shields.io/badge/Live_Demo-Streamlit-red?style=for-the-badge&logo=streamlit" alt="Live Demo">
-</a>
-
-<a href="https://github.com/aynnaqurat-art/ScamShield-PK">
-<img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repository">
-</a>
-
+  <a href="https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-red?style=for-the-badge&logo=streamlit" alt="Live Demo"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/aynnaqurat-art/ScamShield-PK">
+    <img src="https://img.shields.io/badge/💻_Repository-black?style=for-the-badge&logo=github" alt="Repository"/>
+  </a>
 </p>
-
----
-
----
-
-## 🌐 Live Demo
-
-🔗 **Web Application**
-
-https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/
-
-📂 **GitHub Repository**
-
-https://github.com/aynnaqurat-art/ScamShield-PK
 
 ---
 
