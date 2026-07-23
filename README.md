@@ -4,17 +4,27 @@
 
 <p align="center">
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-
-![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)
-
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?logo=scikitlearn)
-
-![VirusTotal](https://img.shields.io/badge/VirusTotal-API-green)
-
-![License](https://img.shields.io/badge/License-MIT-yellow)
+<img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" alt="Python">
+<img src="https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit" alt="Streamlit">
+<img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?logo=scikitlearn" alt="Scikit-learn">
+<img src="https://img.shields.io/badge/VirusTotal-API-green" alt="VirusTotal">
+<img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
 
 </p>
+
+<p align="center">
+
+<a href="https://scamshield-pk-k3wbt6sh7tloq93k8bhvbp.streamlit.app/">
+<img src="https://img.shields.io/badge/Live_Demo-Streamlit-red?style=for-the-badge&logo=streamlit" alt="Live Demo">
+</a>
+
+<a href="https://github.com/aynnaqurat-art/ScamShield-PK">
+<img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repository">
+</a>
+
+</p>
+
+---
 
 ---
 
