@@ -30,16 +30,6 @@ The application combines Machine Learning, rule-based cybersecurity analysis, UR
 Designed as an academic and portfolio project, ScamShield-PK demonstrates the practical application of Artificial Intelligence and Cybersecurity concepts through an interactive web interface deployed on Streamlit Community Cloud.
 
 ---
-
-## 🎯 Project Highlights
-
-- 🤖 AI-powered scam message detection
-- 🛡️ Hybrid Machine Learning and rule-based analysis
-- 🔗 Phishing URL structural inspection
-- 🌐 Social media lookalike domain detection
-- ☁️ Live VirusTotal reputation checking
-- 📊 Explainable risk scoring with security recommendations
-- 🚀 Publicly deployed Streamlit web application
 # 🚨 Problem Statement
 
 The rapid growth of digital communication has significantly increased the number of online scams targeting individuals through job advertisements, messaging platforms, emails, and fraudulent websites. Cybercriminals frequently exploit social engineering techniques to manipulate users into revealing sensitive information, making financial payments, or interacting with malicious links.
@@ -163,25 +153,6 @@ ScamShield-PK was developed using modern technologies for machine learning, cybe
 | Development Environment | Visual Studio Code | Primary IDE used for application development and debugging. |
 
 ---
-
-## 📦 Project Dependencies
-
-The project relies on the following Python libraries:
-
-- streamlit
-- scikit-learn
-- pandas
-- numpy
-- requests
-- joblib
-
-All required dependencies are listed in the `requirements.txt` file and can be installed using:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 # 📂 Project Structure
 
 The project is organized into modular components, making the codebase easier to understand, maintain, and extend. Each file is responsible for a specific functionality within the application.
@@ -216,16 +187,8 @@ ScamShield-PK/
 | `README.md` | Contains the complete project documentation, setup instructions, and usage guide. |
 | `LICENSE` | Defines the licensing terms under which the project can be used and distributed. |
 | `.gitignore` | Specifies files and folders that should not be tracked by Git, such as cache files and virtual environments. |
-| `notebooks/` | Stores Jupyter notebooks used during experimentation, model training, and data analysis. |
-| `screenshots/` | Contains images used to demonstrate the application's interface and results within this documentation. |
-
 ---
 
-## 📌 Project Design Principles
-
-The project follows a modular design to improve readability, maintainability, and future scalability. By separating machine learning, URL analysis, and external API integration into independent modules, each component can be updated or enhanced without affecting the overall application.
-
----
 # 🚀 Installation & Setup
 
 Follow the steps below to set up and run ScamShield-PK on your local machine.
@@ -308,20 +271,6 @@ streamlit run app.py
 ```
 
 Once the application starts, open the local URL displayed in your terminal (typically `http://localhost:8501`) using your web browser.
-
----
-
-## ✅ Verify the Installation
-
-If the setup is successful, the application should display:
-
-- Message Analyzer
-- URL Analyzer
-- Risk Assessment Results
-- Security Recommendations
-
-The project is now ready to analyze suspicious messages and URLs.
-
 ---
 # 📖 Usage Guide
 
@@ -704,7 +653,8 @@ Integrate additional public threat intelligence services to complement existing 
 
 The long-term objective of ScamShield-PK is to evolve into a comprehensive cybersecurity awareness platform that assists users in identifying online scams through intelligent analysis, transparent risk assessment, and continuously updated threat intelligence.
 
----# ⚠️ Project Limitations
+---
+# ⚠️ Project Limitations
 
 While ScamShield-PK provides an effective approach for identifying suspicious messages and URLs, it is important to recognize the current scope and limitations of the project.
 
@@ -796,22 +746,6 @@ If you have questions, suggestions, or would like to discuss this project, feel 
 
 ---
 
-# 🙏 Acknowledgements
-
-This project was made possible with the support of the open-source community and the following technologies and platforms:
-
-- Python
-- Streamlit
-- Scikit-learn
-- Pandas
-- NumPy
-- VirusTotal API
-- Git & GitHub
-
-Special thanks to the developers and maintainers of these technologies for providing reliable tools that support learning, research, and software development.
-
----
-
 # ⚠️ Disclaimer
 
 ScamShield-PK is an academic and portfolio project developed to demonstrate the practical application of Artificial Intelligence and Cybersecurity concepts.
@@ -826,9 +760,9 @@ The author assumes no responsibility for decisions or actions taken based on the
 
 <div align="center">
 
-## ⭐ If you found this project useful, consider giving it a star on GitHub.
+⭐ If you found this project helpful, please consider starring this repository.
 
-**Thank you for visiting the ScamShield-PK repository.**
+Thank you for visiting ScamShield-PK.
 
 </div>
 ---
