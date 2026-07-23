@@ -21,7 +21,6 @@
 </p>
 
 ---
-
 # 📌 Overview
 
 ScamShield-PK is an AI-powered cybersecurity web application developed to help users identify scam job messages, phishing URLs, and fake social media links before interacting with them.
