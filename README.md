@@ -733,7 +733,7 @@ For complete licensing terms, please refer to the **LICENSE** file included in t
 ---
 # 👩‍💻 Author
 
-**Bella**
+**Quratulain**
 
 M.Phil Researcher in Information Technology  
 Department of Information Technology  
