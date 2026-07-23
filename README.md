@@ -765,5 +765,3 @@ The author assumes no responsibility for decisions or actions taken based on the
 Thank you for visiting ScamShield-PK.
 
 </div>
----
----
